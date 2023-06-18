@@ -1,14 +1,15 @@
 ## PPBoTSORT: Solution for the CTMC Challenge 2023
 
-### 1. Summary
+### 1. Overview
 
 Our solution is the paradigm of **tracking-by-detection**, which allows us to improve detection and tracking separately and facilitate engineering practices.
 
-The architecture can be divided into two parts: the detector and the tracker. We choose <font color="#0000fe">**PP-YOLOE+** (L)</font> as the detector and <font color="#7aabc9">**BoT-SORT** (w/o ReID)</font> as the tracker, and they are practical approaches in the field.
+The architecture can be divided into two parts: the detector and the tracker. We choose <span style="color:#0000fe;font-weight:bold">PP-YOLOE+ (L)</span> as the detector and <span style="color:#7aabc9;font-weight:bold">BoT-SORT (w/o ReID)</span> as the tracker, and they are practical approaches in the field.
+
 
 ![](https://github.com/ucsk/ppbotsort/assets/53417456/b2d936ac-59df-4443-bc6d-3a004a92b828)
 
-## 2. Data cleaning
+## 2. Data Preparation
 
 The CTMC dataset[^CTMC-v1] is divided into the **first 75% (training set)** and the **second 25% (validation set)**.
 
@@ -65,7 +66,7 @@ The following are the evaluation results of the related method on the CTMC valid
 
 ![](https://github.com/ucsk/ppbotsort/assets/53417456/8c9a08bd-a2ec-49c7-8a3f-bd7734a24b52)
 
-### 5. Evaluation on the test set
+### 5. Evaluation and Results
 
 | Method      | MOTA ↑        | IDF1↑         | ID Sw.↓     | TRA↑          |
 | ----------- | ------------- | ------------- | ----------- | ------------- |
@@ -73,8 +74,6 @@ The following are the evaluation results of the related method on the CTMC valid
 | PPBoTSORT   | 51.6% (+0.6%) | 62.2% (+3.7%) | 2211 (-201) | 58.28 (+3.12) |
 
 Details about the code of this method are already available in **PaddleDetection**[^PaddleDetection].
-
----
 
 [^CTMC-v1]: [CTMC: Cell Tracking with Mitosis Detection Dataset Challenge](https://motchallenge.net/data/CTMC-v1)
 [^PP-YOLOE]: [PP-YOLOE: An evolved version of YOLO](https://arxiv.org/abs/2203.16250)
